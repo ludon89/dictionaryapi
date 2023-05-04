@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import { UserInput } from "./components/UserInput";
 import { DataDisplay } from "./components/DataDisplay";
+import LoginForm from "./components/LoginForm";
 
 export default function App () {
   const [Data, setData] = useState([]);
@@ -27,6 +28,8 @@ export default function App () {
   }, []);
 
 
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -40,8 +43,13 @@ export default function App () {
         {Data.map(item => (
           <p key={item}>{item.word}</p>
         ))
-
         }
+
+        <hr />
+
+        <div>
+          <LoginForm />
+        </div>
 
       </main>
     </div>
